@@ -1,0 +1,13 @@
+<%=  Serve para usar variaveis  %> 
+<%-  Serve para trazer exatamente o que está escrito %>
+<%#  Para comentar %>
+<%   Para escrever JS >%
+<%-  include('caminho/nomeArquivo) Para se trabalhar com includes %>
+
+ <% if(typeof titulo !=== 'indefined') { %>
+ <%= titulo%>
+     }%> 
+
+
+
+ejs.co = documentação; 
