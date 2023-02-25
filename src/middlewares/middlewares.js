@@ -1,16 +1,8 @@
 exports.middlewareGlobal = (req, res, next) => {
-    res.locals.umaVariavelGlobal = "Se quiser injetar dados no midware, use res.locals"
-  if (req.body.cliente) {
-  
-      console.log();
-  
-      console.log(`Vi que você postou ${req.body.cliente}`);
-  
-      console.log();
-  
-    }
-    next();
-  };
+  res.locals.errors = req.flash('errors');
+  res.locals.success = req.flash('success');
+  next();
+};
   
   exports.outroMiddleware = (req, res, next) => {
     next();

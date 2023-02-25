@@ -9,5 +9,6 @@ route.post('/', homeController.trataPost);
 
 // Rota Login e Cadastro
 route.get ('/login/index', loginController.index);
+route.post ('/login/register', loginController.register);
 
 module.exports = route; 
