@@ -1,7 +1,7 @@
 // Vou criar as sessoes aqui
 // Lembrando que são informações que sairão se eu atualizar a página
 
-exports.paginaInicial = (req, res) => {
+/*exports.paginaInicial = (req, res) => {
    // req.session.usuario = { nome:'Rodrigo', logado: true} // Isso ficará salvo por 7 dias graças ao maxAge do sessionOptions
    req.flash('info', 'Mensagem da info');
    req.flash('error', 'Mensagem de erro');
@@ -19,3 +19,11 @@ res.render('index', {
     res.send(req.body);
     return;
   };
+*/
+  
+ 
+const Contato = require('../models/contatoModel');
+exports.index = async(req, res) => {
+  const contatos = await Contato.buscaContatos();
+  res.render('index', { contatos:contatos });
+};

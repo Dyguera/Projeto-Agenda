@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 
 const HomeSchema = new mongoose.Schema({ 
@@ -14,4 +13,5 @@ module.exports = HomeModel;
 class Home { 
 
 }
+
 module.exports = Home;
