@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // Conectando com a base de dados
-mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=> { 
   console.log('conectei a base')
   app.emit('pronto')
@@ -17,7 +17,7 @@ const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const routes = require('./routes');
 const path = require('path');
-const helmet = require('helmet');
+// const helmet = require('helmet');
 const csrf = require('csurf')
 const { middlewareGlobal, checkCsurfError, csrfMiddleware } = require('./src/middlewares/middlewares');
 
@@ -36,7 +36,7 @@ const sessionOptions = session({
 app.use(sessionOptions);
 app.use(flash());
 
-app.use(helmet());
+// app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

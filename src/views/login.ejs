@@ -8,10 +8,10 @@
       <p  class ="text-center lead">Criar conta ou entrar</h1> 
         <%- include('includes/messages') %>
         <div class="row">
-          <div class="col-lg">
+          <div class="col-lg my-5">
             <h4>Faça seu Cadastro</h4>
             <p>Se você ainda não tem conta preencha o forumlario </p>
-            <form action ="/login/register" method ="POST">
+            <form  class = "form-cadastro" action ="/login/register" method ="POST">
               <input type="hidden" name="_csrf" value =<%= csrfToken%>>
               <div class="form-group">
                 <label>Seu email</label>
@@ -24,10 +24,10 @@
               <button type="submit" class="btn btn-primary">Criar minha conta</button>
             </form>
           </div>
-          <div class="col-lg">
+          <div class="col-lg my-5">
             <h4>Faça seu login</h4>
             <p>Se já tem uma conta, faça login</p>
-            <form action ="/login/login" method ="POST">
+            <form class = "form-cadastro"  action ="/login/login"  method ="POST">
               <input type="hidden" name="_csrf" value =<%= csrfToken%>>
               <div class="form-group">
                 <label>Seu email</label>
